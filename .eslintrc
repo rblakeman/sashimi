@@ -12,6 +12,7 @@
         "semi": "error",
         "no-multiple-empty-lines": "error",
         "newline-before-return": "error",
-        "no-trailing-spaces": "error"
+        "no-trailing-spaces": "error",
+        "quotes": ["error", "single", { "avoidEscape": true }]
     }
 }

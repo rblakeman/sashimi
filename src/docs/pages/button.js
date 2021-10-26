@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Example } from "../";
+import { Example } from '../';
 
-import { Button, Text } from "../../library/components";
+import { Button, Text } from '../../library/components';
 // import * as THEME from "../../components/constants";
 
 const ButtonDocs = () => {
-    const name = "Button";
+    const name = 'Button';
     const examples = [
         {
-            title: "Types",
-            description: "An example of styled Button components",
+            title: 'Types',
+            description: 'An example of styled Button components',
             code: (
                 <>
                     <Button>Primary</Button>
@@ -21,8 +21,8 @@ const ButtonDocs = () => {
             )
         },
         {
-            title: "Sizes",
-            description: "An example of differently sized buttons",
+            title: 'Sizes',
+            description: 'An example of differently sized buttons',
             code: (
                 <>
                     <Button fontSize="small">Small</Button>

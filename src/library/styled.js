@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 /**
     'abbr',
@@ -139,404 +139,404 @@ import React, { useState } from "react";
 export const Styled = (tag, styles) => {
     let Element = null;
     switch (tag) {
-        case "abbr":
+        case 'abbr':
             Element = <abbr />;
             break;
-        case "address":
+        case 'address':
             Element = <address />;
             break;
-        case "area":
+        case 'area':
             Element = <area />;
             break;
-        case "article":
+        case 'article':
             Element = <article />;
             break;
-        case "aside":
+        case 'aside':
             Element = <aside />;
             break;
-        case "audio":
+        case 'audio':
             Element = <audio />;
             break;
-        case "b":
+        case 'b':
             Element = <b />;
             break;
-        case "base":
+        case 'base':
             Element = <base />;
             break;
-        case "bdi":
+        case 'bdi':
             Element = <bdi />;
             break;
-        case "bdo":
+        case 'bdo':
             Element = <bdo />;
             break;
-        case "big":
+        case 'big':
             Element = <big />;
             break;
-        case "blockquote":
+        case 'blockquote':
             Element = <blockquote />;
             break;
-        case "body":
+        case 'body':
             Element = <body />;
             break;
-        case "br":
+        case 'br':
             Element = <br />;
             break;
-        case "button":
+        case 'button':
             Element = <button />;
             break;
-        case "canvas":
+        case 'canvas':
             Element = <canvas />;
             break;
-        case "caption":
+        case 'caption':
             Element = <caption />;
             break;
-        case "cite":
+        case 'cite':
             Element = <cite />;
             break;
-        case "code":
+        case 'code':
             Element = <code />;
             break;
-        case "col":
+        case 'col':
             Element = <col />;
             break;
-        case "colgroup":
+        case 'colgroup':
             Element = <colgroup />;
             break;
-        case "data":
+        case 'data':
             Element = <data />;
             break;
-        case "datalist":
+        case 'datalist':
             Element = <datalist />;
             break;
-        case "dd":
+        case 'dd':
             Element = <dd />;
             break;
-        case "del":
+        case 'del':
             Element = <del />;
             break;
-        case "details":
+        case 'details':
             Element = <details />;
             break;
-        case "dfn":
+        case 'dfn':
             Element = <dfn />;
             break;
-        case "dialog":
+        case 'dialog':
             Element = <dialog />;
             break;
-        case "div":
+        case 'div':
             Element = <div />;
             break;
-        case "dl":
+        case 'dl':
             Element = <dl />;
             break;
-        case "dt":
+        case 'dt':
             Element = <dt />;
             break;
-        case "em":
+        case 'em':
             Element = <em />;
             break;
-        case "embed":
+        case 'embed':
             Element = <embed />;
             break;
-        case "fieldset":
+        case 'fieldset':
             Element = <fieldset />;
             break;
-        case "figcaption":
+        case 'figcaption':
             Element = <figcaption />;
             break;
-        case "figure":
+        case 'figure':
             Element = <figure />;
             break;
-        case "footer":
+        case 'footer':
             Element = <footer />;
             break;
-        case "form":
+        case 'form':
             Element = <form />;
             break;
-        case "h1":
+        case 'h1':
             Element = <h1 />;
             break;
-        case "h2":
+        case 'h2':
             Element = <h2 />;
             break;
-        case "h3":
+        case 'h3':
             Element = <h3 />;
             break;
-        case "h4":
+        case 'h4':
             Element = <h4 />;
             break;
-        case "h5":
+        case 'h5':
             Element = <h5 />;
             break;
-        case "h6":
+        case 'h6':
             Element = <h6 />;
             break;
-        case "head":
+        case 'head':
             Element = <head />;
             break;
-        case "header":
+        case 'header':
             Element = <header />;
             break;
-        case "hgroup":
+        case 'hgroup':
             Element = <hgroup />;
             break;
-        case "hr":
+        case 'hr':
             Element = <hr />;
             break;
-        case "html":
+        case 'html':
             Element = <html />;
             break;
-        case "i":
+        case 'i':
             Element = <i />;
             break;
-        case "iframe":
+        case 'iframe':
             Element = <iframe />;
             break;
-        case "img":
+        case 'img':
             Element = <img />;
             break;
-        case "input":
+        case 'input':
             Element = <input />;
             break;
-        case "ins":
+        case 'ins':
             Element = <ins />;
             break;
-        case "kbd":
+        case 'kbd':
             Element = <kbd />;
             break;
-        case "keygen":
+        case 'keygen':
             Element = <keygen />;
             break;
-        case "label":
+        case 'label':
             Element = <label />;
             break;
-        case "legend":
+        case 'legend':
             Element = <legend />;
             break;
-        case "li":
+        case 'li':
             Element = <li />;
             break;
-        case "link":
+        case 'link':
             Element = <link />;
             break;
-        case "main":
+        case 'main':
             Element = <main />;
             break;
-        case "map":
+        case 'map':
             Element = <map />;
             break;
-        case "mark":
+        case 'mark':
             Element = <mark />;
             break;
-        case "menu":
+        case 'menu':
             Element = <menu />;
             break;
-        case "menuitem":
+        case 'menuitem':
             Element = <menuitem />;
             break;
-        case "meta":
+        case 'meta':
             Element = <meta />;
             break;
-        case "meter":
+        case 'meter':
             Element = <meter />;
             break;
-        case "nav":
+        case 'nav':
             Element = <nav />;
             break;
-        case "noscript":
+        case 'noscript':
             Element = <noscript />;
             break;
-        case "object":
+        case 'object':
             Element = <object />;
             break;
-        case "ol":
+        case 'ol':
             Element = <ol />;
             break;
-        case "optgroup":
+        case 'optgroup':
             Element = <optgroup />;
             break;
-        case "option":
+        case 'option':
             Element = <option />;
             break;
-        case "output":
+        case 'output':
             Element = <output />;
             break;
-        case "p":
+        case 'p':
             Element = <p />;
             break;
-        case "param":
+        case 'param':
             Element = <param />;
             break;
-        case "picture":
+        case 'picture':
             Element = <picture />;
             break;
-        case "pre":
+        case 'pre':
             Element = <pre />;
             break;
-        case "progress":
+        case 'progress':
             Element = <progress />;
             break;
-        case "q":
+        case 'q':
             Element = <q />;
             break;
-        case "rp":
+        case 'rp':
             Element = <rp />;
             break;
-        case "rt":
+        case 'rt':
             Element = <rt />;
             break;
-        case "ruby":
+        case 'ruby':
             Element = <ruby />;
             break;
-        case "s":
+        case 's':
             Element = <s />;
             break;
-        case "samp":
+        case 'samp':
             Element = <samp />;
             break;
-        case "script":
+        case 'script':
             Element = <script />;
             break;
-        case "section":
+        case 'section':
             Element = <section />;
             break;
-        case "select":
+        case 'select':
             Element = <select />;
             break;
-        case "small":
+        case 'small':
             Element = <small />;
             break;
-        case "source":
+        case 'source':
             Element = <source />;
             break;
         default:
-        case "span":
+        case 'span':
             Element = <span />;
             break;
-        case "strong":
+        case 'strong':
             Element = <strong />;
             break;
-        case "style":
+        case 'style':
             Element = <style />;
             break;
-        case "sub":
+        case 'sub':
             Element = <sub />;
             break;
-        case "summary":
+        case 'summary':
             Element = <summary />;
             break;
-        case "sup":
+        case 'sup':
             Element = <sup />;
             break;
-        case "table":
+        case 'table':
             Element = <table />;
             break;
-        case "tbody":
+        case 'tbody':
             Element = <tbody />;
             break;
-        case "td":
+        case 'td':
             Element = <td />;
             break;
-        case "textarea":
+        case 'textarea':
             Element = <textarea />;
             break;
-        case "tfoot":
+        case 'tfoot':
             Element = <tfoot />;
             break;
-        case "th":
+        case 'th':
             Element = <th />;
             break;
-        case "thead":
+        case 'thead':
             Element = <thead />;
             break;
-        case "time":
+        case 'time':
             Element = <time />;
             break;
-        case "title":
+        case 'title':
             Element = <title />;
             break;
-        case "tr":
+        case 'tr':
             Element = <tr />;
             break;
-        case "track":
+        case 'track':
             Element = <track />;
             break;
-        case "u":
+        case 'u':
             Element = <u />;
             break;
-        case "ul":
+        case 'ul':
             Element = <ul />;
             break;
-        case "var":
+        case 'var':
             Element = <var />;
             break;
-        case "video":
+        case 'video':
             Element = <video />;
             break;
-        case "wbr":
+        case 'wbr':
             Element = <wbr />;
             break;
-        case "circle":
+        case 'circle':
             Element = <circle />;
             break;
-        case "clipPath":
+        case 'clipPath':
             Element = <clipPath />;
             break;
-        case "defs":
+        case 'defs':
             Element = <defs />;
             break;
-        case "ellipse":
+        case 'ellipse':
             Element = <ellipse />;
             break;
-        case "foreignObject":
+        case 'foreignObject':
             Element = <foreignObject />;
             break;
-        case "g":
+        case 'g':
             Element = <g />;
             break;
-        case "image":
+        case 'image':
             Element = <image />;
             break;
-        case "line":
+        case 'line':
             Element = <line />;
             break;
-        case "linearGradient":
+        case 'linearGradient':
             Element = <linearGradient />;
             break;
-        case "marker":
+        case 'marker':
             Element = <marker />;
             break;
-        case "mask":
+        case 'mask':
             Element = <mask />;
             break;
-        case "path":
+        case 'path':
             Element = <path />;
             break;
-        case "pattern":
+        case 'pattern':
             Element = <pattern />;
             break;
-        case "polygon":
+        case 'polygon':
             Element = <polygon />;
             break;
-        case "polyline":
+        case 'polyline':
             Element = <polyline />;
             break;
-        case "radialGradient":
+        case 'radialGradient':
             Element = <radialGradient />;
             break;
-        case "rect":
+        case 'rect':
             Element = <rect />;
             break;
-        case "stop":
+        case 'stop':
             Element = <stop />;
             break;
-        case "svg":
+        case 'svg':
             Element = <svg />;
             break;
-        case "text":
+        case 'text':
             Element = <text />;
             break;
-        case "tspan":
+        case 'tspan':
             Element = <tspan />;
             break;
     }
@@ -549,9 +549,9 @@ export const Styled = (tag, styles) => {
     for (const [key, value] of Object.entries(styles)) {
         // console.log(`${key}: ${value}`);
 
-        if (key.charAt(0) === "&") {
-            switch (key.split(":")[1]) {
-                case "hover":
+        if (key.charAt(0) === '&') {
+            switch (key.split(':')[1]) {
+                case 'hover':
                     console.log(value);
                     hoverStyles = {
                         ...hoverStyles,

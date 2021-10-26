@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import * as CONSTANTS from "./constants";
+import * as CONSTANTS from './constants';
 
 export const theme = {
     dark: {
@@ -16,21 +16,21 @@ export const theme = {
         border: CONSTANTS.BLACK,
         text: {
             primary: CONSTANTS.BLACK,
-            title: "#333333",
-            description: "#666666"
+            title: '#333333',
+            description: '#666666'
         },
         background: CONSTANTS.WHITE
     }
 };
 
 export const MODES = {
-    LIGHT: "light",
-    DARK: "dark"
+    LIGHT: 'light',
+    DARK: 'dark'
 };
 
 export const DEFAULT_MODE = MODES.LIGHT;
 
-export const ThemeContext = React.createContext("light");
+export const ThemeContext = React.createContext('light');
 
 export const ThemeProvider = ({ children }) => {
     const [currentMode, setCurrentMode] = useState(DEFAULT_MODE);

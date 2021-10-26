@@ -1,29 +1,29 @@
-import React from "react";
+import React from 'react';
 
-import { ThemeContext } from "./";
+import { ThemeContext } from './';
 
 const BASE_FONT_SIZE = 16;
 
 export const rems = (pixels) => {
     const numbers = pixels
         .trim()
-        .split(" ")
+        .split(' ')
         .map((pixel) => {
-            return `${Number(pixel.replace("px", "")) / BASE_FONT_SIZE}rem`;
+            return `${Number(pixel.replace('px', '')) / BASE_FONT_SIZE}rem`;
         });
 
-    return numbers.join(" ");
+    return numbers.join(' ');
 };
 
 export const color = (token, colors, mode) => {
     if (!colors || !mode) {
-        console.error("error retrieving color from token");
+        console.error('error retrieving color from token');
 
-        return "#000000";
+        return '#000000';
     }
 
     // 'text'
-    const tokenSplit = token.split(".");
+    const tokenSplit = token.split('.');
 
     // colors = { light: {}, dark: {} }
     const availableColors = colors[mode];
@@ -41,9 +41,9 @@ export const color = (token, colors, mode) => {
 
             currentKey = currentKey[currenToken];
         } else {
-            console.error("error retrieving color from token");
+            console.error('error retrieving color from token');
 
-            return "#000000";
+            return '#000000';
         }
     }
 };

@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { Example } from "../";
+import { Example } from '../';
 
-import { Text } from "../../library/components";
+import { Text } from '../../library/components';
 // import * as THEME from "../../components/constants";
 
 const ButtonDocs = () => {
-    const name = "Text";
+    const name = 'Text';
     const examples = [
         {
-            title: "Types",
-            description: "An example of styled Text components",
+            title: 'Types',
+            description: 'An example of styled Text components',
             code: (
-                <div style={{ flexDirection: "column" }}>
+                <div style={{ flexDirection: 'column' }}>
                     <Text size="title">Title</Text>
                     <Text size="header">Header</Text>
                     <Text size="description">Description</Text>
@@ -22,10 +22,10 @@ const ButtonDocs = () => {
             )
         },
         {
-            title: "Weight",
-            description: "An example of styled Text components",
+            title: 'Weight',
+            description: 'An example of styled Text components',
             code: (
-                <div style={{ flexDirection: "column" }}>
+                <div style={{ flexDirection: 'column' }}>
                     <Text bold>Bold</Text>
                     <Text semibold>Semibold</Text>
                     <Text>Normal</Text>

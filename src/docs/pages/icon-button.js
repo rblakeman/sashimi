@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Example } from "../";
+import { Example } from '../';
 
-import { IconButton, Text } from "../../library/components";
+import { IconButton, Text } from '../../library/components';
 // import * as THEME from "../../components/constants";
 
 const IconButtonDocs = () => {
-    const name = "IconButton";
+    const name = 'IconButton';
     const examples = [
         {
-            title: "Types",
-            description: "An example of styled IconButton components",
+            title: 'Types',
+            description: 'An example of styled IconButton components',
             code: (
                 <>
                     <IconButton>+</IconButton>
@@ -21,8 +21,8 @@ const IconButtonDocs = () => {
             )
         },
         {
-            title: "Sizes",
-            description: "An example of differently sized IconButtons",
+            title: 'Sizes',
+            description: 'An example of differently sized IconButtons',
             code: (
                 <>
                     <IconButton fontSize="small">+</IconButton>

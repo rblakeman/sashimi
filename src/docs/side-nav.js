@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { ThemeContext } from "../library";
-import { Text, Button, IconButton } from "../library/components";
-import { SashimiDarkIcon, SashimiLightIcon } from "../library/icons";
-import { color } from "../library/utils";
+import { ThemeContext } from '../library';
+import { Text, Button, IconButton } from '../library/components';
+import { SashimiDarkIcon, SashimiLightIcon } from '../library/icons';
+import { color } from '../library/utils';
 // import * as THEME from "./components/constants";
 
 const LINKS = [
-    { name: "Home", url: "home" },
-    { name: "Button", url: "button" },
-    { name: "IconButton", url: "icon-button" },
-    { name: "Text", url: "text" }
+    { name: 'Home', url: 'home' },
+    { name: 'Button', url: 'button' },
+    { name: 'IconButton', url: 'icon-button' },
+    { name: 'Text', url: 'text' }
 ];
 
 const SideNavContainer = styled.div`
@@ -37,11 +37,11 @@ const Header = styled.span`
 const Title = styled.span``;
 
 const NavItem = styled.button`
-  background-color: ${({ theme, mode }) => color("background", theme, mode)};
+  background-color: ${({ theme, mode }) => color('background', theme, mode)};
   border: 2px solid #999999;
   border-radius: 3px;
   cursor: pointer;
-  color: ${({ theme, mode }) => color("text", theme, mode)};
+  color: ${({ theme, mode }) => color('text', theme, mode)};
   margin: 4px;
   text-align: left;
 `;
@@ -58,14 +58,14 @@ export default function SideNav(props) {
         history.pushState(null, "", `/${url}`);
     };
 
-    const ModeIcon = mode === "light" ? SashimiDarkIcon : SashimiLightIcon;
+    const ModeIcon = mode === 'light' ? SashimiDarkIcon : SashimiLightIcon;
 
     return (
         <SideNavContainer>
             <Header>
                 <ModeIcon
                     size="large"
-                    style={{ marginRight: "8px", cursor: "pointer", flexBasis: "24px" }}
+                    style={{ marginRight: '8px', cursor: 'pointer', flexBasis: '24px' }}
                     onClick={changeMode} />
                 <Title>Sashimi</Title>
             </Header>

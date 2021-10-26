@@ -1,7 +1,7 @@
-import React from "react";
-import { styled } from "@stitches/react";
+import React from 'react';
+import { styled } from '@stitches/react';
 
-import { Button, Text } from "../../library/components";
+import { Button, Text } from '../../library/components';
 // import * as THEME from "./components/constants";
 
 const Home = () => {
