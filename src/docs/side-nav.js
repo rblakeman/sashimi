@@ -16,34 +16,34 @@ const LINKS = [
 ];
 
 const SideNavContainer = styled.div`
-  background-color: #999999;
-  border-radius: 6px;
-  border-right: 2px solid #666666;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 25%;
-  padding: 16px;
+    background-color: #999999;
+    border-radius: 6px;
+    border-right: 2px solid #666666;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 25%;
+    padding: 16px;
 `;
 
 const Header = styled.span`
-  display: flex;
-  font-size: 36px;
-  margin-left: 4px;
-  margin-bottom: 8px;
-  justify-content: center;
+    display: flex;
+    font-size: 36px;
+    margin-left: 4px;
+    margin-bottom: 8px;
+    justify-content: center;
 `;
 
 const Title = styled.span``;
 
 const NavItem = styled.button`
-  background-color: ${({ theme, mode }) => color('background', theme, mode)};
-  border: 2px solid #999999;
-  border-radius: 3px;
-  cursor: pointer;
-  color: ${({ theme, mode }) => color('text', theme, mode)};
-  margin: 4px;
-  text-align: left;
+    background-color: ${({ theme, mode }) => color('background', theme, mode)};
+    border: 2px solid #999999;
+    border-radius: 3px;
+    cursor: pointer;
+    color: ${({ theme, mode }) => color('text', theme, mode)};
+    margin: 4px;
+    text-align: left;
 `;
 
 export default function SideNav(props) {

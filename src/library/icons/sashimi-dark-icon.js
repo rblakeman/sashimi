@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { ReactComponent as SashimiDark } from './svgs/sashimi-dark.svg';
 import { rems } from '../utils';
 
-const SashimiDarkIcon = ({ size, ...remainingProps }) => {
+const SashimiDarkIcon = ({
+    size = 'medium',
+    ...remainingProps
+}) => {
     const iconProps = {};
 
     switch (size) {
@@ -32,10 +35,6 @@ const SashimiDarkIcon = ({ size, ...remainingProps }) => {
 
 SashimiDarkIcon.propTypes = {
     size: PropTypes.string
-};
-
-SashimiDarkIcon.defaultProps = {
-    size: 'medium'
 };
 
 export default SashimiDarkIcon;

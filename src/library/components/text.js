@@ -5,8 +5,14 @@ import * as THEME from '../constants';
 import { ThemeContext } from '../theme';
 import { rems, color } from '../utils';
 
-export const Text = (props) => {
-    const { bold, semibold, light, size, ...remainingProps } = props;
+export const Text = ({
+    bold = false,
+    semibold = false,
+    light = false,
+    size = 'standard',
+    color = THEME.BLACK,
+    ...remainingProps
+}) => {
     const { theme, mode } = useContext(ThemeContext);
 
     const textStyles = {
@@ -55,12 +61,4 @@ Text.propTypes = {
     light: PropTypes.bool,
     semibold: PropTypes.bool,
     size: PropTypes.string
-};
-
-Text.defaultProps = {
-    bold: false,
-    color: THEME.BLACK,
-    light: false,
-    semibold: false,
-    size: 'standard'
 };

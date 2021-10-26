@@ -8,29 +8,29 @@ import { color } from '../library/utils';
 // import * as THEME from "./components/constants";
 
 const ExampleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 16px;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    align-items: flex-start;
 `;
 
 const Header2 = styled.h2`
-  color: ${({ theme, mode }) => color('text.title', theme, mode)};
-  margin: 0px;
+    color: ${({ theme, mode }) => color('text.title', theme, mode)};
+    margin: 0px;
 `;
 
 const Header3 = styled.h3`
-  color: ${({ theme, mode }) => color('text.description', theme, mode)};
-  margin-bottom: 8px;
+    color: ${({ theme, mode }) => color('text.description', theme, mode)};
+    margin-bottom: 8px;
 `;
 
 const ExampleContent = styled.h3`
-  border: 1px solid;
-  border-color: ${({ theme, mode }) => color('border', theme, mode)};
-  display: flex;
-  padding: 8px;
-  min-height: 64px;
-  width: 100%;
+    border: 1px solid;
+    border-color: ${({ theme, mode }) => color('border', theme, mode)};
+    display: flex;
+    padding: 8px;
+    min-height: 64px;
+    width: 100%;
 `;
 
 export default function Example(props) {

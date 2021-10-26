@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 import * as THEME from '../constants';
 import { rems } from '../utils';
 
-export const IconButton = ({ children, fontSize, type, ...remainingProps }) => {
+export const IconButton = ({
+    children,
+    fontSize = 'medium',
+    type = 'primary',
+    ...remainingProps
+}) => {
     const [hover, setHover] = useState(false);
 
     const iconButtonStyles = {
@@ -97,9 +102,4 @@ export const IconButton = ({ children, fontSize, type, ...remainingProps }) => {
 IconButton.propTypes = {
     fontSize: PropTypes.string,
     type: PropTypes.string
-};
-
-IconButton.defaultProps = {
-    fontSize: 'medium',
-    type: 'primary'
 };
