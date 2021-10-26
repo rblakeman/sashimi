@@ -33,19 +33,23 @@ const ExampleContent = styled.h3`
     width: 100%;
 `;
 
-export default function Example(props) {
+export default function Example({
+    code,
+    description,
+    title
+}) {
     const { theme, mode, changeMode } = React.useContext(ThemeContext);
 
     return (
         <ExampleContainer>
             <Header2 theme={theme} mode={mode}>
-                {props.title}
+                {title}
             </Header2>
             <Header3 theme={theme} mode={mode}>
-                {props.description}
+                {description}
             </Header3>
             <ExampleContent theme={theme} mode={mode}>
-                {props.code}
+                {code}
             </ExampleContent>
         </ExampleContainer>
     );

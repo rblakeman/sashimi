@@ -5,9 +5,11 @@ import PropTypes from 'prop-types';
 // import * as THEME from "./components/constants";
 import { Home, ButtonDocs, IconButtonDocs, TextDocs } from './pages';
 
-export default function Content(props) {
+export default function Content({
+    currentPage = 'home'
+}) {
     const router = () => {
-        switch (props.currentPage) {
+        switch (currentPage) {
             case 'button':
                 return <ButtonDocs />;
             case 'icon-button':

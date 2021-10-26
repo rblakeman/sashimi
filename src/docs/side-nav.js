@@ -46,8 +46,9 @@ const NavItem = styled.button`
     text-align: left;
 `;
 
-export default function SideNav(props) {
-    const { onRouteChange } = props;
+export default function SideNav({
+    onRouteChange
+}) {
     const { theme, mode, changeMode } = React.useContext(ThemeContext);
 
     const route = (url) => {

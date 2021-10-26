@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import * as THEME from '../constants';
 import { ThemeContext } from '../theme';
-import { rems, color } from '../utils';
+import { rems, color as colorUtil } from '../utils';
 
 export const Text = ({
     bold = false,
@@ -11,12 +11,13 @@ export const Text = ({
     light = false,
     size = 'standard',
     color = THEME.BLACK,
+    children,
     ...remainingProps
 }) => {
     const { theme, mode } = useContext(ThemeContext);
 
     const textStyles = {
-        color: color('text', theme, mode),
+        color: colorUtil('text', theme, mode),
         fontWeight: '400', // normal
         margin: `${rems('8px 0px')}`
     };
@@ -50,7 +51,7 @@ export const Text = ({
 
     return (
         <p style={textStyles} {...remainingProps}>
-            {props.children}
+            {children}
         </p>
     );
 };
