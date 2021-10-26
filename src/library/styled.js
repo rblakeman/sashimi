@@ -551,15 +551,15 @@ export const Styled = (tag, styles) => {
 
         if (key.charAt(0) === "&") {
             switch (key.split(":")[1]) {
-            case "hover":
-                console.log(value);
-                hoverStyles = {
-                    ...hoverStyles,
-                    ...value
-                };
-                break;
-            default:
-                break;
+                case "hover":
+                    console.log(value);
+                    hoverStyles = {
+                        ...hoverStyles,
+                        ...value
+                    };
+                    break;
+                default:
+                    break;
             }
         } else {
             elementStyles = {
