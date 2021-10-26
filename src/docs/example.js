@@ -34,25 +34,25 @@ const ExampleContent = styled.h3`
 `;
 
 export default function Example(props) {
-  const { theme, mode, changeMode } = React.useContext(ThemeContext);
+    const { theme, mode, changeMode } = React.useContext(ThemeContext);
 
-  return (
-    <ExampleContainer>
-      <Header2 theme={theme} mode={mode}>
-        {props.title}
-      </Header2>
-      <Header3 theme={theme} mode={mode}>
-        {props.description}
-      </Header3>
-      <ExampleContent theme={theme} mode={mode}>
-        {props.code}
-      </ExampleContent>
-    </ExampleContainer>
-  );
+    return (
+        <ExampleContainer>
+            <Header2 theme={theme} mode={mode}>
+                {props.title}
+            </Header2>
+            <Header3 theme={theme} mode={mode}>
+                {props.description}
+            </Header3>
+            <ExampleContent theme={theme} mode={mode}>
+                {props.code}
+            </ExampleContent>
+        </ExampleContainer>
+    );
 }
 
 Example.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  code: PropTypes.object.isRequired
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    code: PropTypes.object.isRequired
 };

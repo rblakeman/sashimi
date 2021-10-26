@@ -9,10 +9,10 @@ import { color } from "../library/utils";
 // import * as THEME from "./components/constants";
 
 const LINKS = [
-  { name: "Home", url: "home" },
-  { name: "Button", url: "button" },
-  { name: "IconButton", url: "icon-button" },
-  { name: "Text", url: "text" }
+    { name: "Home", url: "home" },
+    { name: "Button", url: "button" },
+    { name: "IconButton", url: "icon-button" },
+    { name: "Text", url: "text" }
 ];
 
 const SideNavContainer = styled.div`
@@ -47,53 +47,51 @@ const NavItem = styled.button`
 `;
 
 export default function SideNav(props) {
-  const { onRouteChange } = props;
-  const { theme, mode, changeMode } = React.useContext(ThemeContext);
+    const { onRouteChange } = props;
+    const { theme, mode, changeMode } = React.useContext(ThemeContext);
 
-  const route = (url) => {
-    // const routeName = ev.target.textContent.toLowerCase();
-    onRouteChange(url);
+    const route = (url) => {
+        // const routeName = ev.target.textContent.toLowerCase();
+        onRouteChange(url);
 
-    // eslint-disable-next-line
-    history.pushState(null, "", `/${url}`);
-  };
+        // eslint-disable-next-line
+        history.pushState(null, "", `/${url}`);
+    };
 
-  const ModeIcon = mode === "light" ? SashimiDarkIcon : SashimiLightIcon;
+    const ModeIcon = mode === "light" ? SashimiDarkIcon : SashimiLightIcon;
 
-  return (
-    <SideNavContainer>
-      <Header>
-        <ModeIcon
-          size="large"
-          style={{ marginRight: "8px", cursor: "pointer", flexBasis: "24px" }}
-          onClick={changeMode}
-        />
-        <Title>Sashimi</Title>
-      </Header>
-      {LINKS.map(({ name, url }, idx) => {
-        return (
-          <NavItem
-            theme={theme}
-            mode={mode}
-            key={idx}
-            onClick={() => route(url)}
-          >
-            {name}
-          </NavItem>
-        );
-      })}
-      {/* <Text>CodeSandbox</Text>
-      <Button onClick={() => alert("clicked")} fontSize="36px">
-        Test
-      </Button>
-      <Button backgroundColor={THEME.SALMON} fontSize="36px">
-        Test
-      </Button>
-      <IconButton>+</IconButton> */}
-    </SideNavContainer>
-  );
+    return (
+        <SideNavContainer>
+            <Header>
+                <ModeIcon
+                    size="large"
+                    style={{ marginRight: "8px", cursor: "pointer", flexBasis: "24px" }}
+                    onClick={changeMode} />
+                <Title>Sashimi</Title>
+            </Header>
+            {LINKS.map(({ name, url }, idx) => {
+                return (
+                    <NavItem
+                        theme={theme}
+                        mode={mode}
+                        key={idx}
+                        onClick={() => route(url)}>
+                        {name}
+                    </NavItem>
+                );
+            })}
+            {/* <Text>CodeSandbox</Text>
+            <Button onClick={() => alert("clicked")} fontSize="36px">
+                Test
+            </Button>
+            <Button backgroundColor={THEME.SALMON} fontSize="36px">
+                Test
+            </Button>
+            <IconButton>+</IconButton> */}
+        </SideNavContainer>
+    );
 }
 
 SideNav.propTypes = {
-  onRouteChange: PropTypes.func
+    onRouteChange: PropTypes.func
 };

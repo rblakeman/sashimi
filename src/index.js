@@ -6,10 +6,10 @@ import { ThemeProvider } from "./library";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </StrictMode>,
-  rootElement
+    <StrictMode>
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
+    </StrictMode>,
+    rootElement
 );

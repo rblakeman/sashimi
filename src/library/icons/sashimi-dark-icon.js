@@ -5,37 +5,37 @@ import { ReactComponent as SashimiDark } from "./svgs/sashimi-dark.svg";
 import { rems } from "../utils";
 
 const SashimiDarkIcon = ({ size, ...remainingProps }) => {
-  const iconProps = {};
+    const iconProps = {};
 
-  switch (size) {
-    case "small":
-      iconProps.width = `${rems("12px")}`;
-      break;
-    default:
-    case "medium":
-      iconProps.width = `${rems("16px")}`;
-      break;
-    case "large":
-      iconProps.width = `${rems("24px")}`;
-      break;
-    case "xlarge":
-      iconProps.width = `${rems("36px")}`;
-      break;
-  }
+    switch (size) {
+        case "small":
+            iconProps.width = `${rems("12px")}`;
+            break;
+        default:
+        case "medium":
+            iconProps.width = `${rems("16px")}`;
+            break;
+        case "large":
+            iconProps.width = `${rems("24px")}`;
+            break;
+        case "xlarge":
+            iconProps.width = `${rems("36px")}`;
+            break;
+    }
 
-  return (
-    <div style={iconProps} {...remainingProps}>
-      <SashimiDark />
-    </div>
-  );
+    return (
+        <div style={iconProps} {...remainingProps}>
+            <SashimiDark />
+        </div>
+    );
 };
 
 SashimiDarkIcon.propTypes = {
-  size: PropTypes.string
+    size: PropTypes.string
 };
 
 SashimiDarkIcon.defaultProps = {
-  size: "medium"
+    size: "medium"
 };
 
 export default SashimiDarkIcon;
