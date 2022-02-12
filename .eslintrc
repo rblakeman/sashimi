@@ -1,7 +1,13 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "env": {
         "browser": true
+    },
+    "parserOptions": {
+        "babelOptions": {
+            "presets": ["@babel/preset-react"]
+        },
+        "requireConfigFile": false
     },
     "rules": {
         "indent": [
