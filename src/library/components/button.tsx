@@ -1,18 +1,44 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 import * as THEME from '../constants';
+// @ts-expect-error FIXME
 import { rems } from '../utils';
+import { FONT_SIZES } from '../style';
+import type { FontSizes } from '../style';
 
+const PRIMARY = 'primary';
+const SECONDARY = 'secondary';
+const FIDUCIARY = 'fiduciary';
+const TERTIARY = 'tertiary';
+
+type ButtonProps = {
+    children: React.ReactNode;
+    fontSize: FontSizes;
+    type: typeof PRIMARY | typeof SECONDARY | typeof FIDUCIARY | typeof TERTIARY;
+};
 export const Button = ({
     children,
-    fontSize = 'medium',
-    type = 'primary',
+    fontSize = FONT_SIZES.MEDIUM,
+    type = PRIMARY,
     ...remainingProps
-}) => {
+}: ButtonProps) => {
     const [hover, setHover] = useState(false);
 
-    const buttonStyles = {
+    type ButtonStyles = {
+        backgroundColor?: string;
+        border: string;
+        borderColor?: string;
+        borderRadius: string;
+        color: string;
+        cursor: string;
+        fontSize?: string;
+        margin: string;
+        padding: string;
+        width: string;
+        height: string;
+        minWidth: string;
+    };
+    const buttonStyles: ButtonStyles = {
         border: `${rems('1px')} solid`,
         borderRadius: `${rems('10px')}`,
         color: `${THEME.WHITE}`,
@@ -33,37 +59,37 @@ export const Button = ({
 
     switch (type) {
         default:
-        case 'primary':
+        case PRIMARY:
             buttonStyles.backgroundColor = THEME.BLUE;
             buttonStyles.borderColor = THEME.BLUE;
             break;
-        case 'secondary':
+        case SECONDARY:
             buttonStyles.backgroundColor = THEME.SALMON;
             buttonStyles.borderColor = THEME.SALMON;
             break;
-        case 'fiduciary':
+        case FIDUCIARY:
             buttonStyles.backgroundColor = THEME.WHITE;
             buttonStyles.borderColor = THEME.GRAY1;
             buttonStyles.color = THEME.BLACK;
             break;
-        case 'tertiary':
+        case TERTIARY:
             buttonStyles.backgroundColor = THEME.GRAY1;
             buttonStyles.borderColor = THEME.GRAY1;
             break;
     }
 
     switch (fontSize) {
-        case 'small':
+        case FONT_SIZES.SMALL:
             buttonStyles.fontSize = `${rems('12px')}`;
             break;
         default:
-        case 'medium':
+        case FONT_SIZES.MEDIUM:
             buttonStyles.fontSize = `${rems('16px')}`;
             break;
-        case 'large':
+        case FONT_SIZES.LARGE:
             buttonStyles.fontSize = `${rems('24px')}`;
             break;
-        case 'xlarge':
+        case FONT_SIZES.XLARGE:
             buttonStyles.fontSize = `${rems('36px')}`;
             break;
     }
@@ -88,9 +114,4 @@ export const Button = ({
             {children}
         </button>
     );
-};
-
-Button.propTypes = {
-    fontSize: PropTypes.string,
-    type: PropTypes.string
 };
