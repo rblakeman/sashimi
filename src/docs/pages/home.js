@@ -8,6 +8,7 @@ const Home = () => {
     return (
         <>
             <Text size="title">Home</Text>
+            <Text size="Description">Sashimi Design System</Text>
         </>
     );
 };
