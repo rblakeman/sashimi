@@ -4,13 +4,27 @@ import * as CONSTANTS from './constants';
 
 export const theme = {
     dark: {
-        border: CONSTANTS.WHITE,
+        background: {
+            button: '',
+            input: '',
+            page: ''
+        },
+        border: {
+            button: {
+
+            },
+            input: {
+                idle: '',
+                hover: '',
+                selected: '',
+                disabled: ''
+            }
+        },
         text: {
             primary: CONSTANTS.WHITE,
             title: CONSTANTS.WHITE,
             description: CONSTANTS.WHITE
-        },
-        background: CONSTANTS.BLACK
+        }
     },
     light: {
         border: CONSTANTS.BLACK,

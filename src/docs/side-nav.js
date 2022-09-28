@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { ThemeContext } from '../library';
 import { Text, Button, IconButton } from '../library/components';
 import { SashimiDarkIcon, SashimiLightIcon } from '../library/icons';
-import { color } from '../library/utils';
+import { color } from '../library/theme/utils';
 // import * as THEME from "./components/constants";
 
 const LINKS = [

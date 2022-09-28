@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { ThemeContext } from './';
+// @ts-expect-error
+import { ThemeContext, theme } from './theme';
 
 const BASE_FONT_SIZE = 16;
 
-export const rems = (pixels) => {
+export const rems = (pixels: string) => {
     const numbers = pixels
         .trim()
         .split(' ')
@@ -15,7 +16,7 @@ export const rems = (pixels) => {
     return numbers.join(' ');
 };
 
-export const color = (token, colors, mode) => {
+export const color = (token: string, colors: typeof theme, mode: string) => {
     if (!colors || !mode) {
         console.error('error retrieving color from token');
 
