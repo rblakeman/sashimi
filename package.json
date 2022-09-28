@@ -1,13 +1,20 @@
 {
-    "name": "Sashimi",
+    "name": "sashimi",
     "author": "Ryan Blakeman",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "",
     "keywords": [],
     "main": "src/index.js",
     "scripts": {
+        "setup": "yarn install && yarn setup:docs",
+        "verify": "yarn lint && yarn typecheck",
         "lint": "eslint 'src/**/*.js'",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "//": "Docusaurus",
+        "setup:docs": "cd apps/sashimi-docs && yarn install",
+        "start:docs": "cd apps/sashimi-docs && yarn start",
+        "build:docs": "cd apps/sashimi-docs && yarn build",
+        "serve:docs": "cd apps/sashimi-docs && yarn serve"
     },
     "dependencies": {
         "@types/node": "^18.7.23",
