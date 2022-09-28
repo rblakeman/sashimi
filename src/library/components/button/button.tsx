@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-import * as THEME from '../constants';
-// @ts-expect-error FIXME
-import { rems } from '../utils';
-import { FONT_SIZES } from '../style';
-import type { FontSizes } from '../style';
+import * as THEME from '../../theme/constants';
+import { rems } from '../../theme/utils';
+import { FONT_SIZES, FontSizes } from '../../style';
+// import type { FontSizes } from '../../style';
 
 const PRIMARY = 'primary';
 const SECONDARY = 'secondary';

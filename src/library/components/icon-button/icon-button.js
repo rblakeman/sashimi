@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import * as THEME from '../constants';
-import { rems } from '../utils';
+import * as THEME from '../../theme/constants';
+import { rems } from '../../theme/utils';
 
 export const IconButton = ({
     children,

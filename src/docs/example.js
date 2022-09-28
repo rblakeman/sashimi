@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { ThemeContext } from '../library';
-import { color } from '../library/utils';
+import { color } from '../library/theme/utils';
 // import { Text, Button, IconButton } from "./components";
 // import * as THEME from "./components/constants";
 

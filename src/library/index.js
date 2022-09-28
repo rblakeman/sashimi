@@ -1,9 +1,9 @@
-export * from './constants';
-export { color, rems } from './utils';
+export * from './theme/constants';
+export { color, rems } from './theme/utils';
 export {
     theme,
     MODES,
     DEFAULT_MODE,
     ThemeContext,
     ThemeProvider
-} from './theme';
+} from './theme/theme';

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ReactComponent as SashimiLight } from './svgs/sashimi-light.svg';
-import { rems } from '../utils';
+import { rems } from '../theme/utils';
 
 const SashimiLightIcon = ({
     size = 'medium',
