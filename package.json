@@ -5,6 +5,7 @@
     "description": "",
     "keywords": [],
     "main": "src/index.js",
+    "private": "true",
     "scripts": {
         "setup": "yarn install && yarn setup:docs",
         "verify": "yarn lint && yarn typecheck",
@@ -22,11 +23,15 @@
     },
     "devDependencies": {
         "@babel/preset-react": "^7.18.6",
-        "@typescript-eslint/parser": "^5.28.0"
+        "@typescript-eslint/parser": "^5.28.0",
+        "lerna": "^5.5.2"
     },
     "browserslist": [
         ">0.25%",
         "not ie 11",
         "not op_mini all"
+    ],
+    "workspaces": [
+        "packages/*"
     ]
 }
