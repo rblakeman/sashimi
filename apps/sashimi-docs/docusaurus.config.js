@@ -1,12 +1,12 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
+const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Sashimi',
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'rblakeman', // Usually your GitHub org/user name.
+  projectName: 'sashimi', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -57,9 +57,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Sashimi',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Sashimi Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -67,11 +67,12 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/sandbox', label: 'Sandbox', position: 'left', docId: 'sandbox'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/rblakeman/sashimi',
             label: 'GitHub',
             position: 'right',
           },
@@ -120,13 +121,24 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ryan Blakeman. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+    // plugins: [
+    //     [
+    //         'docusaurus-plugin-module-alias',
+    //         {
+    //             alias: {
+    //                 '@sashimi/components.web.typography': path.resolve(__dirname, '../../libs/components/web/typography/src'),
+    //                 '@sashimi/components.web.buttons': path.resolve(__dirname, '../../libs/components/web/buttons/src'),
+    //             },
+    //         },
+    //     ],
+    // ],
 };
 
 module.exports = config;

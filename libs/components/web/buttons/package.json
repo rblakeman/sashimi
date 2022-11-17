@@ -1,0 +1,11 @@
+{
+    "name": "@sashimi/components.web.buttons",
+    "version": "0.0.1",
+    "author": "Ryan Blakeman",
+    "type": "module",
+    "scripts": {
+    },
+    "peerDependencies": {
+        "lit": "^2.3.1"
+    }
+}

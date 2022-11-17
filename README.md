@@ -2,12 +2,22 @@
 
 Ryan Blakeman | rblakeman31@gmail.com | ryanblakeman.com
 
+Currently just a proof-of-concept Design System I work on in my free time.
+
 ## Getting Started
 
 To install dependencies
 
 ```bash
 yarn setup
+```
+
+### Developing
+
+Run the dev command to setup a watcher for each lib and app
+
+```bash
+npx lerna run dev
 ```
 
 ### Linting
