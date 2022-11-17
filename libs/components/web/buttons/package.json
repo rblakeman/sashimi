@@ -2,9 +2,18 @@
     "name": "@sashimi/components.web.buttons",
     "version": "0.0.1",
     "author": "Ryan Blakeman",
+    "license": "MIT",
+    "main": "dist/buttons.cjs.js",
+    "module": "dist/buttons.esm.js",
+    "browser": "dist/buttons.umd.js",
     "type": "module",
     "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w"
     },
+    "files": [
+      "dist"
+    ],
     "peerDependencies": {
         "lit": "^2.3.1"
     }
