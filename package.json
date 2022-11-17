@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "",
     "author": "Ryan Blakeman",
+    "license": "MIT",
     "keywords": [],
     "main": "src/index.js",
     "private": "true",
