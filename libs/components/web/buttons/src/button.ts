@@ -33,19 +33,19 @@ export class Button extends LitElement {
     `;
 
     @property()
-    variant: 'Primary' | 'Secondary' = 'Primary';
+        variant: 'Primary' | 'Secondary' = 'Primary';
 
     @property()
-    label = '';
+        label = '';
 
     @property()
-    size: 'small' | 'medium' | 'large' = 'medium';
+        size: 'small' | 'medium' | 'large' = 'medium';
 
     render() {
         const classes = classMap({
-            "sashimi-button__root": true,
-            "sashimi-button__root_primary": this.variant === 'Primary',
-            "sashimi-button__root_secondary": this.variant === 'Secondary',
+            'sashimi-button__root': true,
+            'sashimi-button__root_primary': this.variant === 'Primary',
+            'sashimi-button__root_secondary': this.variant === 'Secondary',
         });
 
         return html`
@@ -58,6 +58,6 @@ export class Button extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        "sashimi-button": Button;
+        'sashimi-button': Button;
     }
 }

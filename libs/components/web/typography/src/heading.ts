@@ -15,12 +15,12 @@ export class Heading extends LitElement {
     `;
 
     @property({ type: Boolean })
-    bold = false;
+        bold = false;
 
     render() {
         const classes = classMap({
-            "sashimi-heading__root": true,
-            "sashimi-heading__root_bold": this.bold
+            'sashimi-heading__root': true,
+            'sashimi-heading__root_bold': this.bold
         });
 
         return html`
@@ -33,6 +33,6 @@ export class Heading extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        "sashimi-heading": Heading;
+        'sashimi-heading': Heading;
     }
 }

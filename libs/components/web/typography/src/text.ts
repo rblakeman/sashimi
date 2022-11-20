@@ -15,12 +15,12 @@ export class Text extends LitElement {
     `;
 
     @property({ type: Boolean })
-    bold = false;
+        bold = false;
 
     render() {
         const classes = classMap({
-            "sashimi-text__root": true,
-            "sashimi-text__root_bold": this.bold
+            'sashimi-text__root': true,
+            'sashimi-text__root_bold': this.bold
         });
 
         return html`
@@ -33,6 +33,6 @@ export class Text extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        "sashimi-text": Text;
+        'sashimi-text': Text;
     }
 }
