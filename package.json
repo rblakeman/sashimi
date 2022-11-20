@@ -14,14 +14,16 @@
     ],
     "scripts": {
         "setup": "yarn install && yarn setup:docs",
-        "verify": "yarn lint && yarn typecheck",
+        "verify": "yarn lint && yarn typecheck:all",
         "lint": "eslint '**/*.{ts,tsx,js,jsx}'",
         "typecheck": "tsc --noEmit",
+        "typecheck:all": "yarn typecheck && yarn typecheck:docs",
         "//": "Docusaurus",
         "setup:docs": "cd apps/sashimi-docs && yarn install",
         "start:docs": "cd apps/sashimi-docs && yarn start",
         "build:docs": "cd apps/sashimi-docs && yarn build",
-        "serve:docs": "cd apps/sashimi-docs && yarn serve"
+        "serve:docs": "cd apps/sashimi-docs && yarn serve",
+        "typecheck:docs": "cd apps/sashimi-docs && yarn typecheck"
     },
     "dependencies": {
         "@types/node": "^18.7.23",

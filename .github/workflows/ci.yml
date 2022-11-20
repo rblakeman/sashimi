@@ -67,7 +67,7 @@ jobs:
       - name: Run Typecheck
         # Run the typecheck custom Yarn command that triggers the
         # tsc type check
-        run: yarn typecheck
+        run: yarn typecheck:all
 
       # - name: Run Prettier
       #   # Run the format:check custom Yarn command

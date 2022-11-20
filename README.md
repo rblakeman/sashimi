@@ -26,6 +26,14 @@ npx lerna run dev
 yarn lint
 ```
 
+### Typechecking
+
+Applications are typechecked separately from the rest of the libraries. For developer convenience use the all-in-one command:
+
+```bash
+yarn typecheck:all
+```
+
 ### Testing
 
 ```bash
