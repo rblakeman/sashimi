@@ -43,10 +43,13 @@ jobs:
         # This is a GH ready-to-use action
         uses: actions/checkout@v2
 
+      - name: Install Dependencies
+        run: yarn install
+
       # - name: Setup and run Cypress
       #   # This is a cypress ready-to-use action
       #   # that setups the runner installing the
-      #   # dependencies using NPM and installing Cypress
+      #   # dependencies using Yarn and installing Cypress
       #   uses: cypress-io/github-action@v2
       #   # The action accepts parameters.
       #   # You should read the documentation before using an action
@@ -54,33 +57,33 @@ jobs:
       #   with:
       #     browser: chrome
       #     headless: true
-      #     start: npm start
+      #     start: yarn start
 
       - name: Run ESLint
-        # Run the lint custom NPM command that triggers the
+        # Run the lint custom Yarn command that triggers the
         # ESLint linter check
-        run: npm run lint
+        run: yarn lint
 
       - name: Run Typecheck
-        # Run the typecheck custom NPM command that triggers the
+        # Run the typecheck custom Yarn command that triggers the
         # tsc type check
-        run: npm run typecheck
+        run: yarn typecheck
 
       # - name: Run Prettier
-      #   # Run the format:check custom NPM command
+      #   # Run the format:check custom Yarn command
       #   # that runs prettier to check code format
-      #   run: npm run format:check
+      #   run: yarn format:check
 
       # - name: Run Jest
-      #   # Run the test:unit custom NPM command
+      #   # Run the test:unit custom Yarn command
       #   # that runs Jest
-      #   run: npm run test:unit
+      #   run: yarn test:unit
 
       # - name: Push the coverage
-      #   # Run the coverage:push custom NPM command
+      #   # Run the coverage:push custom Yarn command
       #   # that push the Jest coverage to codcov
       #   # The secrets.CODECOV is a constant that is used
       #   # to store the CODECOV token.
       #   # The GH secrets are used like ENV variables to pass sensible informatin
       #   # to the flow.
-      #   run: npm run coverage:push -- --token=${{ secrets.CODECOV_TOKEN }}
+      #   run: yarn coverage:push -- --token=${{ secrets.CODECOV_TOKEN }}
