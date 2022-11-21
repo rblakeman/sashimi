@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksashimi_docs=self.webpackChunksashimi_docs||[]).push([[9900],{761:s=>{s.exports=JSON.parse('{"permalink":"/sashimi/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

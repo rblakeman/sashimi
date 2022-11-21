@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksashimi_docs=self.webpackChunksashimi_docs||[]).push([[432],{3597:s=>{s.exports=JSON.parse('{"permalink":"/sashimi/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksashimi_docs=self.webpackChunksashimi_docs||[]).push([[4674],{255:s=>{s.exports=JSON.parse('{"label":"hello","permalink":"/sashimi/blog/tags/hello","allTagsPath":"/sashimi/blog/tags","count":2}')}}]);
