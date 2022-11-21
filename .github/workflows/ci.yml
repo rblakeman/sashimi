@@ -87,3 +87,8 @@ jobs:
       #   # The GH secrets are used like ENV variables to pass sensible informatin
       #   # to the flow.
       #   run: yarn coverage:push -- --token=${{ secrets.CODECOV_TOKEN }}
+
+      - name: Build Docusaurus
+        # Run the build custom Yarn command that triggers the
+        # Docusaurus build process
+        run: yarn build:docs
