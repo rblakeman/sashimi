@@ -1,0 +1,5 @@
+# Ignore build output
+build
+dist
+.docusaurus
+node_modules

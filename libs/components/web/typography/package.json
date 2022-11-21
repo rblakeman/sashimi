@@ -1,0 +1,20 @@
+{
+    "name": "@sashimi/components.web.typography",
+    "version": "0.0.1",
+    "author": "Ryan Blakeman",
+    "license": "MIT",
+    "main": "dist/typography.cjs.js",
+    "module": "dist/typography.esm.js",
+    "browser": "dist/typography.umd.js",
+    "type": "module",
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w"
+    },
+    "files": [
+      "dist"
+    ],
+    "peerDependencies": {
+        "lit": "^2.3.1"
+    }
+}

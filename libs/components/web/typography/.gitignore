@@ -10,13 +10,13 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 .vscode
 
 # dev
-*.secret
 .env
 .env.local
 .env.development

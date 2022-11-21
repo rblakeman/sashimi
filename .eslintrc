@@ -19,6 +19,7 @@
         "no-multiple-empty-lines": "error",
         "newline-before-return": "error",
         "no-trailing-spaces": "error",
-        "quotes": ["error", "single", { "avoidEscape": true }]
+        "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+        "jsx-quotes": ["error", "prefer-single"]
     }
 }
