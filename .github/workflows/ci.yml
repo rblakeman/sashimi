@@ -43,6 +43,15 @@ jobs:
         # This is a GH ready-to-use action
         uses: actions/checkout@v2
 
+      - name: Install Yarn (if necessary)
+      # Only necessary for local debugging using 'act' tool
+      # Yarn is already installed/enabled in GitHub Actions runners
+        run:
+          (yarn -v || corepack enable && corepack prepare yarn@1.22.15 --activate)
+
+      - name: Health Check
+        run: echo yarn && yarn -v && echo node && node -v
+
       - name: Install Dependencies
         run: yarn setup
 
