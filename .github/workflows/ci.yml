@@ -97,7 +97,7 @@ jobs:
       #   # to the flow.
       #   run: yarn coverage:push -- --token=${{ secrets.CODECOV_TOKEN }}
 
-      - name: Build Docusaurus
-        # Run the build custom Yarn command that triggers the
-        # Docusaurus build process
-        run: yarn build:docs
+      - name: Build Packages + Docusaurus
+        # Run the build command for all Lerna packages (components)
+        # Then run the build command for Docusaurus (dependent on component builds)
+        run: npx lerna run build
