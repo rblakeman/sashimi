@@ -14,6 +14,7 @@
     ],
     "scripts": {
         "setup": "yarn install && yarn setup:docs",
+        "setup:ci": "yarn install --frozen-lockfile && yarn setup:docs",
         "verify": "yarn lint && yarn typecheck:all",
         "lint": "eslint '**/*.{ts,tsx,js,jsx}'",
         "typecheck": "tsc --noEmit",
