@@ -14,7 +14,7 @@
     ],
     "scripts": {
         "setup": "yarn install && yarn setup:docs",
-        "setup:ci": "yarn install --frozen-lockfile && yarn setup:docs",
+        "setup:ci": "yarn install --frozen-lockfile && yarn setup:docs --frozen-lockfile",
         "verify": "yarn lint && yarn typecheck:all",
         "lint": "eslint '**/*.{ts,tsx,js,jsx}'",
         "typecheck": "tsc --noEmit",
@@ -24,6 +24,7 @@
         "start:docs": "cd apps/sashimi-docs && yarn start",
         "build:docs": "cd apps/sashimi-docs && yarn build",
         "serve:docs": "cd apps/sashimi-docs && yarn serve",
+        "deploy:docs": "cd apps/sashimi-docs && yarn deploy",
         "typecheck:docs": "cd apps/sashimi-docs && yarn typecheck"
     },
     "dependencies": {

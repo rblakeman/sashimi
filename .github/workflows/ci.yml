@@ -1,5 +1,5 @@
 # CI name
-name: Run code checks
+name: Checks
 
 # The on key is used to define when
 # the CI should be triggered, aka Event
