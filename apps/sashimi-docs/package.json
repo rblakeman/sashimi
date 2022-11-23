@@ -2,6 +2,7 @@
   "name": "sashimi-docs",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://rblakeman.github.io/sashimi",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

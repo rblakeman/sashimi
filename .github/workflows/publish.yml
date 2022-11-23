@@ -1,17 +1,16 @@
 # CI name
-name: Checks
+name: Deploy
 
 # The on key is used to define when
 # the CI should be triggered, aka Event
 on:
   # When someone push or merge a pull request
-  # inside the main branch
-  push:
-    branches:
-      - main
-  # When someone create a pull request from
-  # the main branch
-  pull_request:
+  # inside the main branch AFTER the first "Run code checks" action has completed
+  workflow_run:
+    workflows:
+      - Checks
+    types:
+      - completed
     branches:
       - main
 
@@ -24,7 +23,7 @@ on:
 # Each job uses an own runner.
 jobs:
   # Job name
-  suite:
+  deploy:
     # OS of the runner
     runs-on: ubuntu-latest
 
@@ -32,7 +31,7 @@ jobs:
     # and share the same runner.
     # Each step can run a ready-to-use action or a bash command
     steps:
-      # Runner meaningful name
+        # Runner meaningful name
       - name: Checkout
         # Ready-to-use action made by GH or third party
         # companies
@@ -55,49 +54,23 @@ jobs:
       - name: Install Dependencies
         run: yarn setup:ci
 
-      # - name: Setup and run Cypress
-      #   # This is a cypress ready-to-use action
-      #   # that setups the runner installing the
-      #   # dependencies using Yarn and installing Cypress
-      #   uses: cypress-io/github-action@v2
-      #   # The action accepts parameters.
-      #   # You should read the documentation before using an action
-      #   # to understand what it does under the hood.
-      #   with:
-      #     browser: chrome
-      #     headless: true
-      #     start: yarn start
-
-      - name: Run ESLint
-        # Run the lint custom Yarn command that triggers the
-        # ESLint linter check
-        run: yarn lint
-
-      - name: Run Typecheck
-        # Run the typecheck custom Yarn command that triggers the
-        # tsc type check
-        run: yarn typecheck:all
-
-      # - name: Run Prettier
-      #   # Run the format:check custom Yarn command
-      #   # that runs prettier to check code format
-      #   run: yarn format:check
-
-      # - name: Run Jest
-      #   # Run the test:unit custom Yarn command
-      #   # that runs Jest
-      #   run: yarn test:unit
-
-      # - name: Push the coverage
-      #   # Run the coverage:push custom Yarn command
-      #   # that push the Jest coverage to codcov
-      #   # The secrets.CODECOV is a constant that is used
-      #   # to store the CODECOV token.
-      #   # The GH secrets are used like ENV variables to pass sensible informatin
-      #   # to the flow.
-      #   run: yarn coverage:push -- --token=${{ secrets.CODECOV_TOKEN }}
-
       - name: Build Packages + Docusaurus
         # Run the build command for all Lerna packages (components)
         # Then run the build command for Docusaurus (dependent on component builds)
         run: npx lerna run build
+
+      # Popular action to deploy to GitHub Pages:
+      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Build output to publish to the `gh-pages` branch:
+          publish_dir: ./apps/sashimi-docs/build
+          # The following lines assign commit authorship to the official
+          # GH-Actions bot for deploys to `gh-pages` branch:
+          # https://github.com/actions/checkout/issues/13#issuecomment-724415212
+          # The GH actions bot is used by default if you didn't specify the two fields.
+          # You can swap them out with your own user credentials.
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com

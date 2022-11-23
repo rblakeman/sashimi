@@ -1,23 +1,28 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-const path = require('path');
+// const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+const organizationName = 'rblakeman';
+const projectName = 'sashimi';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Sashimi',
     tagline: 'Dinosaurs are cool',
-    url: 'https://your-docusaurus-test-site.com',
-    baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
 
+    url: `https://${organizationName}.github.io`,
+    baseUrl: `/${projectName}/`,
+    trailingSlash: false,
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'rblakeman', // Usually your GitHub org/user name.
-    projectName: 'sashimi', // Usually your repo name.
+    organizationName, // Usually your GitHub org/user name.
+    projectName, // Usually your repo name.
+    deploymentBranch: 'gh-pages',
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
@@ -36,15 +41,13 @@ const config = {
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -72,7 +75,7 @@ const config = {
                 {to: '/blog', label: 'Blog', position: 'left'},
                 {to: '/sandbox', label: 'Sandbox', position: 'left', docId: 'sandbox'},
                 {
-                    href: 'https://github.com/rblakeman/sashimi',
+                    href: `https://github.com/${organizationName}/${projectName}`,
                     label: 'GitHub',
                     position: 'right',
                 },
