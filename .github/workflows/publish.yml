@@ -4,19 +4,15 @@ name: Deploy
 # The on key is used to define when
 # the CI should be triggered, aka Event
 on:
-  # testing
-  pull_request:
+  # When someone push or merge a pull request
+  # inside the main branch AFTER the first "Run code checks" action has completed
+  workflow_run:
+    workflows:
+      - Checks
+    types:
+      - completed
     branches:
       - main
-  # # When someone push or merge a pull request
-  # # inside the main branch AFTER the first "Run code checks" action has completed
-  # workflow_run:
-  #   workflows:
-  #     - Checks
-  #   types:
-  #     - completed
-  #   branches:
-  #     - main
 
 # A job is a set of steps that execute on the same runner.
 # The jobs can be run in parallel or sequentially and can
