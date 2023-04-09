@@ -28,9 +28,9 @@
         "typecheck:docs": "cd apps/sashimi-docs && yarn typecheck"
     },
     "dependencies": {
-        "@types/node": "^18.7.23",
+        "@types/node": "^18.15.11",
         "lit": "^2.3.1",
-        "tslib": "^2.4.0",
+        "tslib": "^2.5.0",
         "typescript": "^4.8.4"
     },
     "devDependencies": {
