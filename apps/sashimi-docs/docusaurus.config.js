@@ -59,6 +59,8 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+        // Replace with your project's social card
+        image: 'img/docusaurus-social-card.jpg',
         navbar: {
             title: 'Sashimi',
             logo: {
@@ -67,10 +69,10 @@ const config = {
             },
             items: [
                 {
-                    type: 'doc',
-                    docId: 'intro',
+                    type: 'docSidebar',
+                    sidebarId: 'tutorialSidebar',
                     position: 'left',
-                    label: 'Docs',
+                    label: 'Tutorial',
                 },
                 {to: '/blog', label: 'Blog', position: 'left'},
                 {to: '/sandbox', label: 'Sandbox', position: 'left', docId: 'sandbox'},
